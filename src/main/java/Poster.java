@@ -28,12 +28,10 @@ public class Poster {
 
     public void setSizePoster(int sizePoster) {
         this.sizePoster = sizePoster;
-
-
     }
+
     public int lengthAllMovies() {
         return findAll().length;
-
     }
 
     public FilmItem[] findLast() {

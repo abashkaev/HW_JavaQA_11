@@ -12,12 +12,14 @@ public class PosterTest {
     FilmItem film5 = new FilmItem("Горько", "Комедия", 5);
     FilmItem film6 = new FilmItem("Форсаж", "Боевик", 6);
     FilmItem film7 = new FilmItem("Тоня против всех", "Байопик", 7);
+
     @BeforeEach
-    public void setup () {
+    public void setup() {
         poster.addFilm(film1);
         poster.addFilm(film2);
         poster.addFilm(film3);
     }
+
     @Test
     public void addFilmTest() {
         poster.addFilm(film4);
@@ -27,6 +29,7 @@ public class PosterTest {
 
         Assertions.assertArrayEquals(expected, actual);
     }
+
     @Test
     public void showAllMovies() {
 
@@ -35,8 +38,9 @@ public class PosterTest {
 
         Assertions.assertArrayEquals(expected, actual);
     }
+
     @Test
-    public void showLast3movies () {
+    public void showLast3movies() {
 
         Poster poster = new Poster(3);
 
@@ -45,7 +49,7 @@ public class PosterTest {
         poster.addFilm(film6);
         poster.addFilm(film7);
 
-        FilmItem[] expected = {film7,film6, film5};
+        FilmItem[] expected = {film7, film6, film5};
         FilmItem[] actual = poster.findLast();
         Assertions.assertArrayEquals(expected, actual);
     }
@@ -61,12 +65,13 @@ public class PosterTest {
         poster.addFilm(film6);
         poster.addFilm(film7);
 
-        FilmItem[] expected = {film7,film6, film5, film4};
+        FilmItem[] expected = {film7, film6, film5, film4};
         FilmItem[] actual = poster.findLast();
         Assertions.assertArrayEquals(expected, actual);
     }
+
     @Test
-    public void lengthAllMoviesTest () {
+    public void lengthAllMoviesTest() {
 
         poster.addFilm(film4);
         poster.addFilm(film5);
